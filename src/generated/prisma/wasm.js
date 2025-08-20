@@ -120,9 +120,99 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
+exports.Prisma.UserScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  password: 'password'
+};
+
+exports.Prisma.InventoryScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description'
+};
+
+exports.Prisma.ProductScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  image: 'image',
+  price: 'price',
+  description: 'description',
+  stock: 'stock',
+  inventoryId: 'inventoryId'
+};
+
+exports.Prisma.CartScalarFieldEnum = {
+  id: 'id',
+  productId: 'productId',
+  quantity: 'quantity',
+  total: 'total',
+  userId: 'userId'
+};
+
+exports.Prisma.InvoiceScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  phone: 'phone',
+  items: 'items',
+  total: 'total',
+  date: 'date',
+  userId: 'userId'
+};
+
+exports.Prisma.SortOrder = {
+  asc: 'asc',
+  desc: 'desc'
+};
+
+exports.Prisma.UserOrderByRelevanceFieldEnum = {
+  id: 'id',
+  email: 'email',
+  password: 'password'
+};
+
+exports.Prisma.InventoryOrderByRelevanceFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description'
+};
+
+exports.Prisma.ProductOrderByRelevanceFieldEnum = {
+  id: 'id',
+  name: 'name',
+  image: 'image',
+  description: 'description',
+  inventoryId: 'inventoryId'
+};
+
+exports.Prisma.CartOrderByRelevanceFieldEnum = {
+  id: 'id',
+  productId: 'productId',
+  userId: 'userId'
+};
+
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
+exports.Prisma.InvoiceOrderByRelevanceFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  phone: 'phone',
+  items: 'items',
+  userId: 'userId'
+};
+
 
 exports.Prisma.ModelName = {
-
+  User: 'User',
+  Inventory: 'Inventory',
+  Product: 'Product',
+  Cart: 'Cart',
+  Invoice: 'Invoice'
 };
 
 /**
