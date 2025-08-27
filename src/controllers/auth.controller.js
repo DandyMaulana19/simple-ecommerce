@@ -1,8 +1,8 @@
-import prisma from "../prisma/config";
+import prisma from "../config/prisma.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { successResponse, errorResponse } from "../utils/reponse";
-import cookieOptions from "../utils/cookieOptions";
+import { successResponse, errorResponse } from "../utils/reponse.js";
+import { cookieOptions } from "../utils/cookieOptions.js";
 
 export const register = async (req, res) => {
   const { name, email, password } = req.body;
