@@ -124,13 +124,16 @@ exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
   name: 'name',
   email: 'email',
-  password: 'password'
+  password: 'password',
+  createdAt: 'createdAt'
 };
 
 exports.Prisma.InventoryScalarFieldEnum = {
   id: 'id',
   name: 'name',
-  description: 'description'
+  description: 'description',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.ProductScalarFieldEnum = {
@@ -140,7 +143,9 @@ exports.Prisma.ProductScalarFieldEnum = {
   price: 'price',
   description: 'description',
   stock: 'stock',
-  inventoryId: 'inventoryId'
+  inventoryId: 'inventoryId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.CartScalarFieldEnum = {
@@ -159,7 +164,9 @@ exports.Prisma.InvoiceScalarFieldEnum = {
   items: 'items',
   total: 'total',
   date: 'date',
-  userId: 'userId'
+  userId: 'userId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.SortOrder = {

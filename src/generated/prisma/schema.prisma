@@ -15,12 +15,13 @@ datasource db {
 }
 
 model User {
-  id       String    @id @default(uuid())
-  name     String
-  email    String    @unique
-  password String
-  invoices Invoice[]
-  carts    Cart[]
+  id        String    @id @default(uuid())
+  name      String
+  email     String    @unique
+  password  String
+  createdAt DateTime  @default(now())
+  invoices  Invoice[]
+  carts     Cart[]
 }
 
 model Inventory {
@@ -28,6 +29,8 @@ model Inventory {
   name        String
   description String
   products    Product[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 }
 
 model Product {
@@ -40,6 +43,8 @@ model Product {
   inventoryId String
   inventory   Inventory @relation(fields: [inventoryId], references: [id])
   carts       Cart[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 }
 
 model Cart {
@@ -53,13 +58,15 @@ model Cart {
 }
 
 model Invoice {
-  id     String   @id @default(uuid())
-  email  String
-  name   String
-  phone  String
-  items  String
-  total  Int
-  date   DateTime @default(now())
-  userId String?
-  user   User?    @relation(fields: [userId], references: [id])
+  id        String   @id @default(uuid())
+  email     String
+  name      String
+  phone     String
+  items     String
+  total     Int
+  date      DateTime @default(now())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

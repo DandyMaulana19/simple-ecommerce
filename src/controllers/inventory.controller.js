@@ -17,12 +17,12 @@ export const getInventory = async (req, res) => {
   return successResponse(res, `Get Inventory by Id ${id} Success`, inventory);
 };
 export const createInventory = async (req, res) => {
-  const { name, descripstion } = req.body;
+  const { name, description } = req.body;
   const inventory = await prisma.inventory.create({
     data: { name, description },
   });
 
-  if (!name || !descripstion)
+  if (!name || !description)
     return errorResponse(res, "Data Cannot be Null", null, 401);
 
   return successResponse(res, "Inventory Created", inventory);
