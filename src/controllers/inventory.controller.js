@@ -11,7 +11,7 @@ export const getInventory = async (req, res) => {
   const inventory = await prisma.inventory.findUnique({ where: { id } });
 
   if (!inventory) {
-    return errorResponse(res, "Id Not Found", null, 401);
+    return errorResponse(res, "Inventory Not Found", null, 401);
   }
 
   return successResponse(res, `Get Inventory by Id ${id} Success`, inventory);
