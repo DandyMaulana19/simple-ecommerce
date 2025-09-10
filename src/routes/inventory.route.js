@@ -14,7 +14,7 @@ router.use(verifyToken);
 router.get("/", getInventories);
 router.get("/:id", getInventory);
 router.post("/", createInventory);
-router.put("/", updateInventory);
+router.put("/:id", updateInventory);
 router.delete("/:id", deleteInventory);
 
 export default router;
